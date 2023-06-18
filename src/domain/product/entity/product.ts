@@ -10,7 +10,7 @@ export default class Product implements ProductInterface{
         this._id = id;
         this._name = name;
         this._price = price;
-        this.validate();
+        this.validate();    
     }
 
     get id(): string {

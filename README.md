@@ -1,1 +1,1 @@
-﻿# DDD Parterns com TypeScript
+﻿# Clean Architecture com TypeScript

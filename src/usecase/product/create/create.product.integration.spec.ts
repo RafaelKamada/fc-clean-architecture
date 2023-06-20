@@ -34,13 +34,6 @@ describe("Integration test for create product use case", () => {
         expect(result2).toEqual(product);
 
         const input = {
-            type: "a",
-            name: "John",
-            price: 10,
-        }
-
-        const output = {
-            id: "123",
             name: "John",
             price: 10,
         }

@@ -12,12 +12,9 @@ export default class CreateProductUseCase {
     }
 
     async execute(input: InputCreateProductDto): Promise<OutputCreateProductDto> {
-        const product = await ProductFactory.create(input.type, input.name, input.price);
+        const product = await ProductFactory.createProduct(input.name, input.price);
+        await this.productRepository.create(product);    
         
-        if (product instanceof Product) {
-            await this.productRepository.create(product);    
-        }
-
         return {
             id: product.id,
             name: product.name,
